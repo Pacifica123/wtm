@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+.header {
+    background-color: #3333339a;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  @font-face {
+    font-family: 'ljk';
+    src: url('./assets/ljk_Ambient-Medium.ttf');
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 100px;
+    font-family:'ljk';
+  }
+  
+ body{
+    background-image: url(./assets/wallpaperflare.com_wallpaper.jpg);
+    background-color: black;
+    color: rgb(211, 165, 255);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    backdrop-filter: blur(10px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+ } 
+
+ /* src/app/home/home.component.css */
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+  }
+  
+
+  @media only screen and (max-width: 720px){
+    .header h1{
+        font-size: 50px;
+    } 
+    
+  }

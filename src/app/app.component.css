@@ -1,0 +1,42 @@
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: rgb(192, 125, 255);
+    font-weight: bold;
+    background-color:rgb(53, 0, 102);
+    border-radius: 3px;
+    padding: 5px;
+  }
+  
+  nav a:hover {
+    background-color: #ff000085;
+    color: #ffa600cb;
+  }
+
+
+  @media only screen and (max-width: 720px){
+    nav ul li{
+        padding: 5px;
+        display:block;
+        margin-right: 0;
+      }
+    nav a{
+        border-radius:0%;  
+        padding-left:50%;
+        padding-right: 50%;
+    }
+    nav {
+        text-align: center;
+        
+    }
+  }
