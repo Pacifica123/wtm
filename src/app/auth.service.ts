@@ -11,14 +11,19 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
+  private headers = new HttpHeaders({
+    'Content-Type': 'application/json',
+    // Добавь Access-Control-Allow-Origin, если требуется
+    'Access-Control-Allow-Origin': 'http://localhost:8080.',
+  });
+
   register(data: any): Observable<any>{
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      // Добавь Access-Control-Allow-Origin, если требуется
-      'Access-Control-Allow-Origin': 'http://localhost:8080.',
-    });
     console.log(data);
-    //отправка данных на бэкенд
-    return this.http.post(`${this.baseUrl}/register`, data, { headers: headers});
+    return this.http.post(`${this.baseUrl}/register`, data, { headers: this.headers});
+  }
+
+  login(data: any): Observable<any>{
+    console.log(data);
+    return this.http.post(`${this.baseUrl}/login`, data, { headers: this.headers});
   }
 }
