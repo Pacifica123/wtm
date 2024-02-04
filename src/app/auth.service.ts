@@ -17,6 +17,7 @@ export class AuthService {
       // Добавь Access-Control-Allow-Origin, если требуется
       'Access-Control-Allow-Origin': 'http://localhost:8080.',
     });
+    console.log(data);
     //отправка данных на бэкенд
     return this.http.post(`${this.baseUrl}/register`, data, { headers: headers});
   }

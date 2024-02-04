@@ -18,7 +18,14 @@ export class RegistrationComponent {
   constructor(private auth: AuthService){}
 
 
-  register(){
+  register() {
+    // Собираем данные из формы в userData
+    this.userData.username = (document.getElementById('username') as HTMLInputElement).value;
+    this.userData.email = (document.getElementById('email') as HTMLInputElement).value;
+    this.userData.password = (document.getElementById('password') as HTMLInputElement).value;
+    this.userData.confirmPassword = (document.getElementById('confirmPassword') as HTMLInputElement).value;
+
+    console.log('Входные данные: ', this.userData);
     this.auth.register(this.userData).subscribe(
       (responce) => {
         console.log('Успешная регистрация! ', responce);
